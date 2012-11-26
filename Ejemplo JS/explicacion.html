@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Explicación Ejemplo de POO con JS</title>
+
+	<style type="text/css">
+		html,body{
+			font-size: 13px;
+			font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		}
+
+		h1{
+			font-size: 16px;
+		}
+		h2{
+			font-size: 15px;
+			color: #433c3f;
+		}
+
+		p.ejemplo{
+			background-color: #cccdd0;
+			padding: 3px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+<h1>Que es la POO</h1>
+<p>Es un paradigma de programación que usa objetos y clases, está basada en técnicas como el encapsulamiento, la herencia, la moularidad...</p>
+
+	<h2>Encapsulamiento:</h2>
+	<p>Algo así como poder usar código sin tener acceso a el ni saber lo que hace (por ejemplo funciones).</p>
+	<p class="ejemplo">var a = new Array();  //tu no sabes lo que hace ahí dentro (o si..) pero ves un resultado.</p>
+
+	<h2>Herencia:</h2>
+	<p>Las clases pueden tener padres o hijos.</p>
+	<p class="ejemplo">Tengo la clase Persona (padre) que tiene varias subclases Hombre, Mujer, Niño (hijos) los hijos tienen propiedades de los pares y otras solo de ellos que los hacen diferentes unos de otros.</p>
+
+	<h2>Modulariad:</h2>
+	<p>Más o menos quiere decir que puedes separar tener "trozos de código" independientes entre si y reaprovecharlos.</p>
+	<p class="ejemplo">Una clase que sea RegistroUsuario(nombre, email); podria ser independiente del programa donde la pongamos.</p>
+
+<h1>Que es una clase y un objeto:</h1>
+<p>Podríamos definir una clase como un conjunto de atributos y métodos que definen las características y propiedades de nuestro objeto, es decir una serie de características que dan una identidad al objeto y el objeto como ya se puede deducir de lo anterior es donde se aplican esta serie de características y propiedades.</p>
+<p class="ejemplo">Por ejemplo podrían ser clases Coche, Moto, Bici y objetos MiBiciNueva, CocheVecino, CocheCaro </p>
+
+<h1>Que es un atributo:</h1>
+<p>Es una característica de la clase.</p>
+<p class="ejemplo">Ruedas = 4; Color = verde; etc...</p>
+
+<h1>Que es un método:</h1>
+<p>Es una propiedad de una clase.</p>
+<p class="ejemplo">CuantasRuedas(); CambiaColor('verde'); etc...</p>
+
+<h2>Nota sobre palabra reservada que usaremos:</h2>
+<p>"...El prototype sirve para extender la funcionalidad a todas las instancias de ese objeto, pero compartiendo el mismo código con todos ellos, que es justo lo que más nos interesaba conseguir. Así que usando la palabra reservada PROTOTYPE, extenderemos el prototipo de la función (clase) ..." vía: http://www.jlabstudio.com/webgl/2012/04/programacion-orientada-a-objetos-en-javascript/</p>
+
+<p class="ejemplo">Clase.<span style="text-decoration: underline; font-weight: bold;">prototype</span>.get = function(atributo);</p>
+</body>
+</html>

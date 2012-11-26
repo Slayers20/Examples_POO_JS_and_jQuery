@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ejemplo de POO con JS</title>
+	<script type="text/javascript" src="vehiculo.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	//creo un nuevo vehiculo (tipo, ruedas, color)
+	Seat = new Vehiculo("coche","4","rojo");
+
+	//muestro las ruedas (4)
+	console.log(Seat.get("ruedas"));
+
+	//pongo 10 ruedas
+	Seat.set("ruedas","10");
+
+	//muestro las ruedas (10)
+	console.log(Seat.get("ruedas"));
+
+	//le añado una rueda
+	Seat.ponRueda();
+
+	//muestro las ruedas (11)
+	console.log(Seat.get("ruedas"));
+
+	//pincho una rueda
+	Seat.pinchaRueda();
+
+	//muestro las ruedas (10)
+	console.log(Seat.get("ruedas"));
+</script>
+</body>
+</html>
