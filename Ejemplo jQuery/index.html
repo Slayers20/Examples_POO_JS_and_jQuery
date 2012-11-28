@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Text-Type" Text="text/html; charset=utf-8" />
+	<title>Ejemplo de POO con JS</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="jquery.figura.js"></script>
+	<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+	<section></section>
+
+<script type="text/javascript">
+	//creo una nueva figura
+	var caja = $("section").figura("caja", {tono : "red",texto : "Hola"});
+
+	//miro que Tono tiene
+	console.log(caja.getTono());
+
+	//cambio un Tono
+	caja.setTono("blue");
+
+	//duplico la figura
+	var caja2 = caja.duplicate("caja2");
+
+	//cambio un contenido
+	caja2.setText("Adios");
+
+	//creo un circulo
+	var redonda = $("section").circulo("redonda",300);
+
+	//cambio el Tono
+	redonda.setTono("green");
+
+	//miro radio
+	console.log(redonda.getRadio());
+
+	//miro Tono
+	console.log(redonda.getTono());
+
+	//cambio el radio
+	redonda.setRadio(50);
+
+	//cambio el contenido
+	redonda.setText("Fin");
+</script>
+</body>
+</html>

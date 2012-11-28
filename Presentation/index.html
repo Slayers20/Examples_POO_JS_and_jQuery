@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="resources/images/icon@2x.png"/>
+    <link rel="apple-touch-startup-image" href="resources/images/splash.png" />
+
+    <title>Introducción POO Javascript y jQuery</title>
+
+    <link rel="stylesheet" href="http://kinout.tapquo.com/build/kinout-1.0.css">
+    <link rel="stylesheet" href="assets/css/theme.kinout.css">
+    <link href="assets/javascript/rainbow/themes/blackboard.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="kinout">
+
+        <section>
+            <article>
+                <h1>#jQuery<mark>io</mark></h1>
+                <h4><mark>Hoy probaremos algo de ""POO""</mark></h4>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>Introducción a la <mark>POO</mark></h1>
+                <h4><mark>Programación Orientada a Objetos</mark></h4>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>Que es la POO</h1>
+                <h3><mark>Es un paradigma de programación basado en técnicas como el encapsulamiento, la herencia, la moularidad...</mark></h3>
+            </article>
+
+            <article>
+                <h1>Encapsulamiento</h1>
+                <h3><mark>No tienes por que saber como funciona por dentro.</mark></h3>
+                <h3 data-step="fade" class="sub">var a = new Array(); //tu no sabes lo que hace ahí dentro (o si..)</h3>
+            </article>
+
+            <article>
+                <h1>Modulariad</h1>
+                <h3><mark>Códigos independientes y reaprovechamiento del mismo.</mark></h3>
+                <h3 data-step="fade" class="sub">RegistroUsuario(nombre, email);</h3>
+            </article>
+
+            <article>
+                <h1>Herencia</h1>
+                <h3><mark>Características que pasan de padres a hijos</mark></h3>
+                <h3 data-step="fade" class="sub">Persona (padre) Hombre, Mujer, Jovencito (hijos)</h3>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header>
+                    <h2>Que son las <mark>clases</mark> y los <mark>objetos</mark></h2>
+                </header>
+
+                <div>
+                    Conjunto de atributos y métodos que definen las características y propiedades de nuestro objeto, dan una identidad al objeto.
+                </div>
+
+                <h3 data-step="move" class="sub">Clases: Coche, Moto, Bici</h3>
+                <h3 data-step="move alternate" class="sub">Objetos: MiBiciNueva, CocheVecino</h3>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header>
+                    <h2>Que son los <mark>atributos</mark></h2>
+                </header>
+
+                <div>
+                    Características que tienen las clases, estas características se aplicarán a los objetos.
+                </div>
+
+                <h3 data-step="fade" class="sub">Tener 4 ruedas, Ser de color Verde, etc.</h3>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header>
+                    <h2>Que son los <mark>métodos</mark></h2>
+                </header>
+
+                <div>
+                    Propiedades que tienen las clases, con las que podemos trabajar para modificar los objetos o conocer atributos de estos.
+                </div>
+
+                <h3 data-step="fade" class="sub">Saber las ruedas que tengo, quitar una rueda, pintar de otro color, etc.</h3>
+            </article>
+        </section>
+
+        <section>
+            <article>
+
+                <header>
+                    <h2>Ejemplo POO con <mark>Javascript</mark></h2>
+                </header>
+
+                <pre class="margin-top" contenteditable="true">
+                <code data-language="javascript" >
+//creo una nueva figura
+var caja = new figura("red", "Hola");
+
+//Miro que tono tiene
+console.log(caja.getTono());
+
+//cambio un Tono
+caja.setTono("blue");
+
+//duplico la figura
+var caja2 = caja.duplicate();
+
+//cambio un contenido
+caja2.setText("Adios");
+
+//creo un circulo (¡¡HERENCIA!!)
+var redonda = new circulo(300);
+                </code></pre>
+            </article>
+        </section>
+
+        <section>
+            <article>
+
+                <header>
+                    <h2>Ejemplo ""POO"" con <mark>jQuery</mark></h2>
+                </header>
+
+                <pre class="margin-top" contenteditable="true">
+                <code data-language="javascript">
+//creo una nueva figura
+var caja = $("section").figura("caja", "red", "Hola");
+
+//Miro que Tono tiene
+console.log(caja.getTono());
+
+//cambio un Tono
+caja.setTono("blue");
+
+//duplico la figura
+var caja2 = caja.duplicate("caja2");
+
+//cambio un contenido
+caja2.setText("Adios");
+
+//creo un circulo (¡¡HERENCIA!!)
+var redonda = $("section").circulo("redonda",300);
+                </code></pre>
+            </article>
+        </section>
+
+        <section>
+            <article>
+
+                <header>
+                    <h2>Comparación <mark>Javascript</mark> VS <mark>jQuery</mark></h2>
+                </header>
+
+                <pre class="margin-top" contenteditable="true"  style="width: 500px; float: left; margin-left: -600px !important;">
+                <code data-language="javascript" >
+//creo una nueva figura
+var caja = new figura("red", "Hola");
+
+//Miro que tono tiene
+console.log(caja.getTono());
+
+//cambio un Tono
+caja.setTono("blue");
+
+//duplico la figura
+var caja2 = caja.duplicate();
+
+//cambio un contenido
+caja2.setText("Adios");
+
+//creo un circulo (¡¡HERENCIA!!)
+var redonda = new circulo(300);
+                </code></pre>
+
+                <pre class="margin-top" contenteditable="true"  style="width: 600px; float: left; margin-left: 00px !important;">
+                <code data-language="javascript">
+//creo una nueva figura
+var caja = $("section").figura("caja", "red", "Hola");
+
+//Miro que Tono tiene
+console.log(caja.getTono());
+
+//cambio un Tono
+caja.setTono("blue");
+
+//duplico la figura
+var caja2 = caja.duplicate("caja2");
+
+//cambio un contenido
+caja2.setText("Adios");
+
+//creo un circulo (¡¡HERENCIA!!)
+var redonda = $("section").circulo("redonda",300);
+                </code></pre>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <header>
+                    <h2>Cosas que viene bien <mark>saber</mark></h2>
+                </header>
+
+                <pre class="margin-top" contenteditable="true">
+                <code data-language="javascript">
+// Prototype sirve para extender la funcionalidad a todas las instancias de ese objeto, pero compartiendo el mismo código con todos ellos.
+Clase.prototype.get = function(atributo);
+
+// Por ejemplo
+function Vehiculo(tipo, ruedas, tono){ ... }
+Vehiculo.prototype.getTipo = function(){ ... };
+
+// Asi lo utiliza jQuery
+jQuery.fn.init.prototype = jQuery.fn = $.fn
+
+// Por ejemplo
+$.fn.figura = function (id,opciones) { ... }
+getTono : function () { ... }
+                </code></pre>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>Siguiente paso <mark>será...</mark></h1>
+                <h4 data-step="fade" class="sub"><mark>Quitar los "", usar POO de JS y objetos jQuery</mark></h4>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>Vamos a ver <mark>código</mark></h1>
+                <h4><mark>Sigue la demo con #jQueryio</mark></h4>
+            </article>
+        </section>
+    </div>
+    <script src="assets/javascript/QuoJS.js"></script>
+    <script src="assets/javascript//raf.js"></script>
+    <script src="http://kinout.tapquo.com/build/kinout-1.0.js"></script>
+    <script>
+        $$(document).ready(function() {
+            KINOUT.init();
+        });
+    </script>
+    <script src="assets/javascript/rainbow/rainbow.min.js"></script>
+    <script src="assets/javascript/rainbow/language/generic.js"></script>
+
+</body>
+</html>
